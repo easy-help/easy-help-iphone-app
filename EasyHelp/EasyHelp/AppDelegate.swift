@@ -19,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let homeViewController = UIViewController()
-        homeViewController.view.backgroundColor = UIColor.red
+        let homeViewController = DoctorTestViewController()
         
         window!.rootViewController = homeViewController
         window!.makeKeyAndVisible()
