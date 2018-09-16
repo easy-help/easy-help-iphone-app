@@ -48,6 +48,11 @@ playground.xcworkspace
 #
 # Pods/
 
+EasyHelp/Pods
+EasyHelp/Podfile.lock
+EasyHelp/EasyHelp.xcodeproj/xcuserdata/
+EasyHelp/EasyHelp.xcworkspace/xcuserdata/
+
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
