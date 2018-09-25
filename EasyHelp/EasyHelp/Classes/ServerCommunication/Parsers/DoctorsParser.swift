@@ -28,6 +28,6 @@ class DoctorsParser: ServerResponseParser {
     }
     
     override func getResult() -> AnyObject? {
-        return doctors as? AnyObject
+        return doctors as AnyObject
     }
 }
