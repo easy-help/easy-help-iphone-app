@@ -31,7 +31,7 @@ class Server {
     }()
     
     func send(_ request: ServerRequest, parser: ServerResponseParser?, callback: SimpleServerCallback?) {
-        self.networkManager.request(request.getSite(), method: .get, parameters: nil).responseString { response in
+        self.networkManager.request(request.getEndpoint(), method: .post,  parameters: request.getParameters(), encoding: JSONEncoding.default).responseString { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(parseJSON: value)

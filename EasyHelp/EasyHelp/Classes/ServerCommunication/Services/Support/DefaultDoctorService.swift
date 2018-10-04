@@ -11,7 +11,9 @@ import Foundation
 class DefaultDoctorService: DoctorService {
     func getAllDoctors(callback: @escaping (([Doctor]) -> ())) {
         let parser = DoctorsParser()
-        let request = ServerRequest(site: "http://easy-help-backend.herokuapp.com/api/doctors")
+        let request = ServerRequest()
+        request.addParameter(key: "id", value: "doctor" as AnyObject)
+        request.addParameter(key: "act", value: "getAll" as AnyObject)
         let callback = SimpleServerCallback(successBlock: {(data: AnyObject?) in
             var doctors = [Doctor]()
             if let dataU = data as? [Doctor] {

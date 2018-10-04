@@ -9,13 +9,18 @@
 import Foundation
 
 class ServerRequest {
-    private let tempSite: String
+    private let apiEndpoint: String = "https://easy-help-backend.herokuapp.com/api"
+    private var parameters = [String : AnyObject]()
     
-    init(site: String) {
-        self.tempSite = site
+    func getEndpoint() -> String {
+        return apiEndpoint
     }
     
-    func getSite() -> String {
-        return tempSite
+    func addParameter(key: String, value: AnyObject) {
+        parameters[key] = value
+    }
+    
+    func getParameters() -> [String : AnyObject] {
+        return parameters
     }
 }
